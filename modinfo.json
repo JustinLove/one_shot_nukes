@@ -8,6 +8,11 @@
   "display_name": "One Shot Nukes",
   "forum": "",
   "identifier": "com.wondible.pa.one_shot_nukes",
+  "scenes": {
+    "live_game_sandbox": [
+      "coui://ui/mods/one_shot_nukes/live_game_sandbox.js"
+    ]
+  },
   "signature": "not yet implemented",
   "version": "0.0.0"
 }

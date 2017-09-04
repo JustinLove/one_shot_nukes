@@ -19,7 +19,7 @@ module.exports = function(grunt) {
               'LICENSE.txt',
               'README.md',
               'CHANGELOG.md',
-              'com.wondible.pa.ones_shot_nukes/**',
+              'com.wondible.pa.one_shot_nukes/**',
               'ui/**',
               'pa/**'],
             dest: modPath,
