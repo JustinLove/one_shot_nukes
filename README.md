@@ -1,8 +1,6 @@
-# Preloaded NUkes
+# One Shot Nukes
 
-Nukes and anti-nukes are preloaded with one missile, and the metal cost is increased proportionally.  Stats are based on Titans.
-
-(Extracted from Puppetmaster)
+Single-use nuclear missiles, primarly for use with puppetmaster.
 
 ## Development
 
