@@ -1,0 +1,13 @@
+{
+  "author": "wondible",
+  "build": "87296",
+  "category": ["nuke", "titans"],
+  "context": "server",
+  "date": "2015/09/10",
+  "description": "Nukes and anti-nukes are preloaded with one missile, and the metal cost is increased proportionally.",
+  "display_name": "Preloaded Nukes",
+  "forum": "https://forums.uberent.com/threads/rel-server-preloaded-nukes.70389/",
+  "identifier": "com.wondible.pa.preloaded_nukes",
+  "signature": "not yet implemented",
+  "version": "1.0.0"
+}
