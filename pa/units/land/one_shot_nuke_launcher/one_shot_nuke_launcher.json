@@ -7,16 +7,11 @@
   "atrophy_rate": 240,
   "atrophy_cool_down": 15,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
-  "buildable_projectiles": [
-    "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json"
-  ],
   "factory": {
     "store_units": true,
     "spawn_points": [
       "bone_missile01"
     ],
-    "initial_build_spec": "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json",
-    "default_build_stance": "Continuous",
     "default_ammo": [
       "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json"
     ]
@@ -27,12 +22,10 @@
     "UNITTYPE_Offense",
     "UNITTYPE_Advanced",
     "UNITTYPE_Nuke",
-    "UNITTYPE_Factory",
     "UNITTYPE_FabAdvBuild",
     "UNITTYPE_Important"
   ],
   "command_caps": [
-    "ORDER_FactoryBuild",
     "ORDER_Attack"
   ],
   "recon": {
@@ -85,10 +78,6 @@
   "tools": [
     {
       "spec_id": "/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json",
-      "aim_bone": "bone_root"
-    },
-    {
-      "spec_id": "/pa/units/land/nuke_launcher/nuke_launcher_build_arm.json",
       "aim_bone": "bone_root"
     }
   ],

@@ -9,17 +9,12 @@
   "area_build_type": "Sphere",
   "area_build_separation": 100,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
-  "buildable_projectiles": [
-    "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json"
-  ],
   "factory_cooldown_time": 5,
   "factory": {
     "store_units": true,
     "spawn_points": [
       "socket_missile01"
     ],
-    "initial_build_spec": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json",
-    "default_build_stance": "Continuous",
     "default_ammo": [
       "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json"
     ]
@@ -30,13 +25,10 @@
     "UNITTYPE_Defense",
     "UNITTYPE_NukeDefense",
     "UNITTYPE_Advanced",
-    "UNITTYPE_Factory",
     "UNITTYPE_FabAdvBuild",
     "UNITTYPE_Important"
   ],
-  "command_caps": [
-    "ORDER_FactoryBuild"
-  ],
+  "command_caps": [],
   "recon": {
     "observer": {
       "items": [
@@ -98,10 +90,6 @@
     }
   ],
   "tools": [
-    {
-      "spec_id": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_build_arm.json",
-      "aim_bone": "bone_root"
-    },
     {
       "spec_id": "/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json",
       "aim_bone": "bone_root",

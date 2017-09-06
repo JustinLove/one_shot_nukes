@@ -82,9 +82,19 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher.json',
         process: function(spec, ammo) {
-          spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
           spec.build_metal_cost += ammo.build_metal_cost
+          delete spec.buildable_projectiles
+          spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
+          delete spec.factory.initial_build_spec
+          delete spec.factory.default_build_stance
+          spec.unit_types = spec.unit_types.filter(function(type) {
+            return type != "UNITTYPE_Factory"
+          })
+          spec.command_caps = spec.command_caps.filter(function(type) {
+            return type != "ORDER_FactoryBuild"
+          })
           spec.tools[0].spec_id = '/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json'
+          spec.tools.pop()
           spec.wreckage_health_frac = 0
           return spec
         }
@@ -108,11 +118,21 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher.json',
         process: function(spec, ammo) {
+          spec.build_metal_cost += ammo.build_metal_cost
+          delete spec.buildable_projectiles
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
           spec.factory.spawn_points.pop()
           spec.factory.spawn_points.pop()
-          spec.build_metal_cost += ammo.build_metal_cost
-          spec.tools[1].spec_id = '/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json'
+          delete spec.factory.initial_build_spec
+          delete spec.factory.default_build_stance
+          spec.unit_types = spec.unit_types.filter(function(type) {
+            return type != "UNITTYPE_Factory"
+          })
+          spec.command_caps = spec.command_caps.filter(function(type) {
+            return type != "ORDER_FactoryBuild"
+          })
+          spec.tools.shift()
+          spec.tools[0].spec_id = '/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json'
           spec.wreckage_health_frac = 0
           return spec
         }
