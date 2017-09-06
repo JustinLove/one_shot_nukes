@@ -1,7 +1,7 @@
 {
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
-  "display_name": "!LOC:Anti-Nuke Launcher",
-  "description": "!LOC:Anti-nuke launcher- Equipped with advanced anti-nuclear missile weapon.",
+  "display_name": "!LOC:SR-24 -Shield- Missile Defense",
+  "description": "!LOC:Anti-nuke - Intercepts incoming nuclear missiles.",
   "max_health": 3500,
   "build_metal_cost": 17000,
   "atrophy_rate": 200,

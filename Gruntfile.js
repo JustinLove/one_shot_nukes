@@ -82,6 +82,8 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher.json',
         process: function(spec, ammo) {
+          spec.display_name = ammo.display_name
+          spec.description = ammo.description
           spec.build_metal_cost += ammo.build_metal_cost
           delete spec.buildable_projectiles
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
@@ -123,6 +125,8 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher.json',
         process: function(spec, ammo) {
+          spec.display_name = ammo.display_name
+          spec.description = ammo.description
           spec.build_metal_cost += ammo.build_metal_cost
           delete spec.buildable_projectiles
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
