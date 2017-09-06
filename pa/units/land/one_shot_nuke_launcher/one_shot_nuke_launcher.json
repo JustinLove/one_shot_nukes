@@ -7,15 +7,6 @@
   "atrophy_rate": 240,
   "atrophy_cool_down": 15,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
-  "factory": {
-    "store_units": true,
-    "spawn_points": [
-      "bone_missile01"
-    ],
-    "default_ammo": [
-      "/pa/units/land/nuke_launcher/nuke_launcher_ammo.json"
-    ]
-  },
   "unit_types": [
     "UNITTYPE_Land",
     "UNITTYPE_Structure",
@@ -78,7 +69,7 @@
   "tools": [
     {
       "spec_id": "/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json",
-      "aim_bone": "bone_root"
+      "aim_bone": "bone_missile01"
     }
   ],
   "events": {
@@ -224,5 +215,6 @@
     20
   ],
   "TEMP_texelinfo": 19.5004,
+  "si_name": "nuke_launcher_ammo",
   "wreckage_health_frac": 0
 }

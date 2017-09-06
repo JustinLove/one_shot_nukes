@@ -10,15 +10,6 @@
   "area_build_separation": 100,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
   "factory_cooldown_time": 5,
-  "factory": {
-    "store_units": true,
-    "spawn_points": [
-      "socket_missile01"
-    ],
-    "default_ammo": [
-      "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json"
-    ]
-  },
   "unit_types": [
     "UNITTYPE_Land",
     "UNITTYPE_Structure",
@@ -92,8 +83,8 @@
   "tools": [
     {
       "spec_id": "/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json",
-      "aim_bone": "bone_root",
-      "muzzle_bone": "bone_root"
+      "aim_bone": "socket_missile01",
+      "muzzle_bone": "socket_missile01"
     }
   ],
   "events": {
@@ -194,5 +185,6 @@
     19.5,
     15
   ],
+  "si_name": "anti_nuke_launcher_ammo",
   "wreckage_health_frac": 0
 }

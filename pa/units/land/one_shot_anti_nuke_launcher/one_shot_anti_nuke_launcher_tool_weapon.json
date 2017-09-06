@@ -2,7 +2,6 @@
   "base_spec": "/pa/tools/base_missile_tactical_turret/base_missile_tactical_turret.json",
   "tool_type": "TOOL_Weapon",
   "ammo_id": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json",
-  "ammo_source": "factory",
   "rate_of_fire": 1.5,
   "max_range": 300,
   "yaw_rate": 0,

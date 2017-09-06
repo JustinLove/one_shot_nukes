@@ -87,13 +87,17 @@ module.exports = function(grunt) {
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
           delete spec.factory.initial_build_spec
           delete spec.factory.default_build_stance
+          delete spec.factory
           spec.unit_types = spec.unit_types.filter(function(type) {
             return type != "UNITTYPE_Factory"
           })
           spec.command_caps = spec.command_caps.filter(function(type) {
             return type != "ORDER_FactoryBuild"
           })
+          //spec.model = [ { filename: "/pa/units/air/missile_nuke/missile_nuke.papa" } ]
+          spec.si_name = "nuke_launcher_ammo"
           spec.tools[0].spec_id = '/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json'
+          spec.tools[0].aim_bone = 'bone_missile01'
           spec.tools.pop()
           spec.wreckage_health_frac = 0
           return spec
@@ -106,6 +110,7 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json',
         process: function(spec) {
+          delete spec.ammo_source
           spec.self_destruct = true
           return spec
         }
@@ -125,14 +130,19 @@ module.exports = function(grunt) {
           spec.factory.spawn_points.pop()
           delete spec.factory.initial_build_spec
           delete spec.factory.default_build_stance
+          delete spec.factory
           spec.unit_types = spec.unit_types.filter(function(type) {
             return type != "UNITTYPE_Factory"
           })
           spec.command_caps = spec.command_caps.filter(function(type) {
             return type != "ORDER_FactoryBuild"
           })
+          //spec.model = [ { filename: "/pa/units/air/missile_anti_nuke/missile_anti_nuke.papa" } ]
+          spec.si_name = "anti_nuke_launcher_ammo"
           spec.tools.shift()
           spec.tools[0].spec_id = '/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json'
+          spec.tools[0].aim_bone = 'socket_missile01'
+          spec.tools[0].muzzle_bone = 'socket_missile01'
           spec.wreckage_health_frac = 0
           return spec
         }
@@ -144,6 +154,7 @@ module.exports = function(grunt) {
         cwd: media,
         dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json',
         process: function(spec) {
+          delete spec.ammo_source
           spec.self_destruct = true
           return spec
         }
