@@ -16,9 +16,7 @@
   "factory": {
     "store_units": true,
     "spawn_points": [
-      "socket_missile01",
-      "socket_missile02",
-      "socket_missile03"
+      "socket_missile01"
     ],
     "initial_build_spec": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo.json",
     "default_build_stance": "Continuous",
@@ -105,7 +103,7 @@
       "aim_bone": "bone_root"
     },
     {
-      "spec_id": "/pa/units/land/anti_nuke_launcher/anti_nuke_launcher_tool_weapon.json",
+      "spec_id": "/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json",
       "aim_bone": "bone_root",
       "muzzle_bone": "bone_root"
     }
@@ -207,5 +205,6 @@
     18.5,
     19.5,
     15
-  ]
+  ],
+  "wreckage_health_frac": 0
 }

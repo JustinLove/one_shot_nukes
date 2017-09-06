@@ -84,7 +84,7 @@
   ],
   "tools": [
     {
-      "spec_id": "/pa/units/land/nuke_launcher/nuke_launcher_tool_weapon.json",
+      "spec_id": "/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json",
       "aim_bone": "bone_root"
     },
     {
@@ -234,5 +234,6 @@
     20,
     20
   ],
-  "TEMP_texelinfo": 19.5004
+  "TEMP_texelinfo": 19.5004,
+  "wreckage_health_frac": 0
 }

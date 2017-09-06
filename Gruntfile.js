@@ -48,6 +48,18 @@ module.exports = function(grunt) {
       },
     },
     proc: {
+      unit_list: {
+        src: [
+          'pa_ex1/units/unit_list.json',
+        ],
+        cwd: media,
+        dest: 'pa/units/unit_list.json',
+        process: function(spec) {
+          spec.units.push('/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher.json')
+          spec.units.push('/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher.json')
+          return spec
+        }
+      },
       nuke: {
         src: [
           'pa_ex1/units/land/nuke_launcher/nuke_launcher.json',
@@ -58,6 +70,19 @@ module.exports = function(grunt) {
         process: function(spec, ammo) {
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
           spec.build_metal_cost += ammo.build_metal_cost
+          spec.tools[0].spec_id = '/pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json'
+          spec.wreckage_health_frac = 0
+          return spec
+        }
+      },
+      nuke_tool: {
+        src: [
+          'pa/units/land/nuke_launcher/nuke_launcher_tool_weapon.json',
+        ],
+        cwd: media,
+        dest: 'pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_tool_weapon.json',
+        process: function(spec) {
+          spec.self_destruct = true
           return spec
         }
       },
@@ -70,7 +95,22 @@ module.exports = function(grunt) {
         dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher.json',
         process: function(spec, ammo) {
           spec.factory.default_ammo = [ spec.factory.initial_build_spec ]
+          spec.factory.spawn_points.pop()
+          spec.factory.spawn_points.pop()
           spec.build_metal_cost += ammo.build_metal_cost
+          spec.tools[1].spec_id = '/pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json'
+          spec.wreckage_health_frac = 0
+          return spec
+        }
+      },
+      antinuke_tool: {
+        src: [
+          'pa/units/land/anti_nuke_launcher/anti_nuke_launcher_tool_weapon.json',
+        ],
+        cwd: media,
+        dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_tool_weapon.json',
+        process: function(spec) {
+          spec.self_destruct = true
           return spec
         }
       },
