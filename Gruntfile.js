@@ -26,6 +26,20 @@ module.exports = function(grunt) {
           },
         ],
       },
+      icons: {
+        files: [
+          {
+            src: media + 'pa/units/land/nuke_launcher/nuke_launcher_ammo_icon_buildbar.png',
+            dest: 'pa/units/land/one_shot_nuke_launcher/one_shot_nuke_launcher_icon_buildbar.png',
+          },
+        ],
+        files: [
+          {
+            src: media + 'pa/units/land/anti_nuke_launcher/anti_nuke_launcher_ammo_icon_buildbar.png',
+            dest: 'pa/units/land/one_shot_anti_nuke_launcher/one_shot_anti_nuke_launcher_icon_buildbar.png',
+          },
+        ],
+      },
     },
     jsonlint: {
       all: {
@@ -133,7 +147,7 @@ module.exports = function(grunt) {
   })
 
   // Default task(s).
-  grunt.registerTask('default', ['proc', 'copy:mod']);
+  grunt.registerTask('default', ['proc', 'copy:icons', 'copy:mod']);
 
 };
 
