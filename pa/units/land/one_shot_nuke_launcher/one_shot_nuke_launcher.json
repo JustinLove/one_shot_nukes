@@ -1,7 +1,8 @@
 {
   "base_spec": "/pa/units/land/base_structure/base_structure.json",
-  "display_name": "!LOC:LR-96 -Pacifier- Missile",
-  "description": "!LOC:Nuclear missile - Long range, large area damage, projectile",
+  "unit_name": "Nuclear Missile Launcher",
+  "display_name": "!LOC:LR-96 Pacifier Nuclear Missile",
+  "description": "!LOC:Nuclear missile - Long range interplanetary, large area damage, projectile",
   "max_health": 1500,
   "build_metal_cost": 44400,
   "atrophy_rate": 240,
