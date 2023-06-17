@@ -8,14 +8,18 @@
   "atrophy_rate": 240,
   "atrophy_cool_down": 15,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
+  "alt_area_build_type": "Sphere",
+  "alt_area_max_radius": 100,
   "unit_types": [
+    "UNITTYPE_Custom58",
     "UNITTYPE_Land",
     "UNITTYPE_Structure",
     "UNITTYPE_Offense",
     "UNITTYPE_Advanced",
     "UNITTYPE_Nuke",
     "UNITTYPE_FabAdvBuild",
-    "UNITTYPE_Important"
+    "UNITTYPE_Important",
+    "UNITTYPE_Interplanetary"
   ],
   "command_caps": [
     "ORDER_Attack"
@@ -209,7 +213,12 @@
   "mesh_bounds": [
     14,
     14,
-    18
+    22.5
+  ],
+  "wreckage_mesh_bounds": [
+    14,
+    14,
+    22.5
   ],
   "placement_size": [
     20,

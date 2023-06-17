@@ -9,15 +9,19 @@
   "atrophy_cool_down": 15,
   "area_build_type": "Sphere",
   "area_build_separation": 100,
+  "alt_area_build_type": "Sphere",
+  "alt_area_build_separation": 80,
   "spawn_layers": "WL_AnyHorizontalGroundOrWaterSurface",
   "factory_cooldown_time": 5,
   "unit_types": [
+    "UNITTYPE_Custom58",
     "UNITTYPE_Land",
     "UNITTYPE_Structure",
     "UNITTYPE_Defense",
     "UNITTYPE_NukeDefense",
     "UNITTYPE_Advanced",
     "UNITTYPE_FabAdvBuild",
+    "UNITTYPE_CombatFabAdvBuild",
     "UNITTYPE_Important"
   ],
   "command_caps": [],
@@ -184,7 +188,12 @@
   "mesh_bounds": [
     18.5,
     19.5,
-    15
+    14
+  ],
+  "wreckage_mesh_bounds": [
+    18.5,
+    19.5,
+    12
   ],
   "si_name": "anti_nuke_launcher_ammo",
   "wreckage_health_frac": 0
